@@ -1,5 +1,4 @@
 import resource, {
-  initialResource,
   calculateFood,
   calculateWood,
   calculateBrick,

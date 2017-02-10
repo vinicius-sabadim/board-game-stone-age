@@ -1,13 +1,9 @@
-export function initialResource() {
-  return {
-    wood: 30,
-    brick: 30,
-    stone: 30,
-    gold: 30
-  }
+let resource = {
+  wood: 30,
+  brick: 30,
+  stone: 30,
+  gold: 30
 }
-
-let resource = initialResource()
 
 export function calculateFood(sum) {
   return Math.floor(sum / 2)
