@@ -1,19 +1,7 @@
-import game, {
-  addPlayer,
-  drawCivilizationCards
-} from './'
-
-const newPlayer = {
-  name: 'Vinicius',
-  color: 'blue'
-}
+import game from './'
 
 describe('Game start', () => {
   describe('Initial setup', () => {
-    beforeAll(() => {
-      drawCivilizationCards()
-    })
-
     test('it should have players defined', () => {
       expect(game.players).toBeDefined()
     })
@@ -37,19 +25,6 @@ describe('Game start', () => {
     })
     test('it should have building cards defined', () => {
       expect(game.buildingCards).toBeDefined()
-    })
-  })
-  describe('Include a new player', () => {
-    test('it should add the new player on players', () => {
-      addPlayer(newPlayer)
-      expect(game.players.length).toBe(1)
-      expect(game.players[0].id).toBe(1)
-      expect(game.players[0].score).toBe(0)
-    })
-    test('it have a correct id', () => {
-      addPlayer(newPlayer)
-      expect(game.players.length).toBe(2)
-      expect(game.players[1].id).toBe(2)
     })
   })
 })
